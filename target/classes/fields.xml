@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE isopackager PUBLIC
+        "-//jPOS/jPOS Generic Packager DTD 1.0//EN"
+        "http://jpos.org/dtd/generic-packager-1.0.dtd">
+<!-- ISO 8583:1993 (ASCII) isofield  descriptions for GenericPackager -->
+<isopackager>
+    <!-- Definindo o campo Bitmap -->
+    <isofield id="1" length="16" name="BITMAP" class="org.jpos.iso.IFB_BITMAP"/>
+    <isofield  id="2"  length="19"  name="Número do Cartão"      class="org.jpos.iso.IFA_LLCHAR"/>
+    <isofield  id="3"  length="6"   name="Código de Processamento" class="org.jpos.iso.IF_CHAR"/>
+    <isofield  id="4"  length="12"  name="Valor da Transação"    class="org.jpos.iso.IFA_NUMERIC"/>
+    <isofield  id="7"  length="10"  name="Data/Hora Transmissão" class="org.jpos.iso.IFA_NUMERIC"/>
+    <!-- MMDDHHMMSS FORMATO -->
+    <isofield  id="11" length="6"   name="NSU"                  class="org.jpos.iso.IF_CHAR"/>
+    <isofield  id="12" length="6"   name="Hora Local"           class="org.jpos.iso.IF_CHAR"/>
+    <!-- HHMMSS FORMATO -->
+    <isofield  id="13" length="4"   name="Data Local"           class="org.jpos.iso.IF_CHAR"/>
+    <!-- MMDD FORMATO -->
+    <isofield  id="14" length="4"   name="Data de Vencimento"   class="org.jpos.iso.IF_CHAR"/>
+    <!-- AAMM FORMATO -->
+    <isofield  id="22" length="3"   name="Modo de Entrada"   class="org.jpos.iso.IF_CHAR"/>
+    <isofield  id="42" length="15"   name="Codigo Do Estabelecimento"   class="org.jpos.iso.IFA_LLCHAR"/>
+    <isofield  id="48" length="19"   name="Codigo De Seguranca"   class="org.jpos.iso.IFA_LLCHAR"/>
+
+    <isofield  id="67" length="2"   name="Numero de Parcelas"   class="org.jpos.iso.IF_CHAR"/>
+
+    <isofield  id="39" length="3"   name="Código de Resposta"   class="org.jpos.iso.IF_CHAR"/>
+    <isofield  id="38" length="6"   name="Código de Autorização" class="org.jpos.iso.IF_CHAR"/>
+    <isofield  id="127" length="19"   name="Nsu Host"   class="org.jpos.iso.IFA_LLCHAR"/>
+</isopackager>

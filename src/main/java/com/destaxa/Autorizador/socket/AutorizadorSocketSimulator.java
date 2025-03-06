@@ -2,6 +2,8 @@ package com.destaxa.Autorizador.socket;
 
 import com.destaxa.Autorizador.factory.IsoMsgFactory;
 import com.destaxa.Autorizador.utils.FieldUtil;
+import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.coyote.BadRequestException;
 import org.jpos.iso.ISOException;
@@ -18,6 +20,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @Component
 @Slf4j
+@RequiredArgsConstructor
 public class AutorizadorSocketSimulator {
 
     private final ISOPackager packager;
@@ -27,11 +30,7 @@ public class AutorizadorSocketSimulator {
 
     private static final Long MIL_EM_CENTAVOS = 100000l;
 
-    public AutorizadorSocketSimulator() throws ISOException {
-        this.packager = new GenericPackager("src/main/resources/fields.xml");
-        startServer();
-    }
-
+    @PostConstruct
     private void startServer() {
         new Thread(() -> {
             try (ServerSocket serverSocket = new ServerSocket(5050)) {

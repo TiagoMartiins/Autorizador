@@ -25,7 +25,6 @@ public class TransacaoDTO {
     private String cardNumber;
 
     @NotNull(message = "Transaction value can't be null")
-    @Length(min = 1, max = 12, message = "You Have to ajust Transaction value")
     private Double value;
 
     @NotNull(message = "Installments can't be null")
